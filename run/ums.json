@@ -3,7 +3,7 @@
   "instances": 1,
   "cpus": 0.2,
   "mem": 300.0,
-  "disk": 10000,
+  "disk": 100,
   "container": {
     "docker": {
       "type": "DOCKER",

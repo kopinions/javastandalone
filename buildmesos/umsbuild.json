@@ -9,7 +9,14 @@
       "type": "DOCKER",
       "image": "folsomlabs/jenkins-dind-single",
       "network": "HOST"
-    }
+    },
+    "volumes": [
+      {
+        "containerPath": "/var/run/docker.sock",
+        "hostPath": "/var/run/docker.sock",
+        "mode": "RW"
+      }
+    ]
   },
   "env": {
     "JENKINS_COMMAND": "git clone https://github.com/sjkyspa/javastandalone.git && cd javastandalone  && ./gradlew standaloneJar && ./gradlew docker && ./gradlew push"
