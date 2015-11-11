@@ -7,7 +7,7 @@
   "container": {
     "docker": {
       "type": "DOCKER",
-      "image": "localhost:5000/thoughtworks/captcha",
+      "image": "localhost:5000/captcha",
       "network": "HOST",
       "parameters": [
       ]
