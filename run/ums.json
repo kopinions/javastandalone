@@ -1,0 +1,24 @@
+{
+  "id": "umsrun",
+  "instances": 1,
+  "cpus": 0.2,
+  "mem": 300.0,
+  "disk": 10000 ,
+  "container": {
+      "docker": {
+            "type": "DOCKER",
+            "image": "localhost:5000/thoughtworks/captcha",
+            "network": "HOST",
+            "parameters": [
+            ]
+
+       }
+   },
+   "env" :
+   {
+
+   },
+  "ports": [ 0 ],
+
+  "maxLaunchDelaySeconds": 36000,
+}

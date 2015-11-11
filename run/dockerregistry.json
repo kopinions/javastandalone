@@ -1,0 +1,26 @@
+{
+  "id": "pythonserver",
+  "instances": 1,
+  "cpus": 0.2,
+  "mem": 300.0,
+  "container": {
+    "docker": {
+      "type": "DOCKER",
+      "image": "registry:2",
+      "network": "HOST",
+      "parameters": [
+        {
+          "key": "name",
+          "value": "registry"
+        }
+      ]
+    }
+  },
+  "env": {
+    "JENKINS_COMMAND": ""
+  },
+  "ports": [
+    0
+  ],
+  "maxLaunchDelaySeconds": 36000
+}
