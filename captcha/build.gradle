@@ -34,3 +34,25 @@ task standaloneJar(type: Jar, dependsOn: jar) {
     exclude("META-INF/*.RSA")
     exclude("META-INF/*.RSA")
 }
+
+task docker(type: Exec) {
+    def dockerfile = new File('Dockerfile')
+    dockerfile.text= '''
+        FROM java:8
+        MAINTAINER jksun
+        ENV REFRESHED_AT 2014-11-25
+
+        COPY captcha/build/libs/captcha-standalone.jar captcha-standalone.jar
+
+        ENV PORT 4000
+
+        EXPOSE 4000
+
+        CMD ["java", "-jar", "captcha-standalone.jar", "com.thoughtworks.captcha.CaptchaServer"]
+    '''
+    commandLine 'docker', 'build', '-t', 'thoughtworks/captcha'
+}
+
+task push(type: Exec) {
+    commandLine 'docker', 'push', 'localhost:5000/thouthgworks/captcha'
+}
