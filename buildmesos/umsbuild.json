@@ -19,7 +19,7 @@
     ]
   },
   "env": {
-    "JENKINS_COMMAND": "git clone https://github.com/sjkyspa/javastandalone.git && cd javastandalone  && ./gradlew standaloneJar && ./gradlew docker > docker.log 2&1 && ./gradlew push >push.log 2&1"
+    "JENKINS_COMMAND": "git clone https://github.com/sjkyspa/javastandalone.git && cd javastandalone  && ./gradlew standaloneJar && ./gradlew docker && ./gradlew push"
   },
   "ports": [
     0

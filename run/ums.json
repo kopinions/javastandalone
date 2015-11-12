@@ -1,5 +1,5 @@
 {
-  "id": "umsrun",
+  "id": "umsrun1",
   "instances": 1,
   "cpus": 0.2,
   "mem": 300.0,
@@ -7,14 +7,18 @@
   "container": {
     "docker": {
       "type": "DOCKER",
-      "image": "localhost:5000/captcha",
+      "image": "registry.thoughtworks.com:5000/captcha",
       "network": "HOST",
       "parameters": [
-      ],
-      "portMappings": [
-        { "containerPort": 8081, "hostPort": 0, "servicePort": 9000, "protocol": "tcp" }
       ]
-    }
+    },
+    "volumes": [
+      {
+        "containerPath": "/var/run/docker.sock",
+        "hostPath": "/var/run/docker.sock",
+        "mode": "RW"
+      }
+    ]
   },
   "env": {
   },
