@@ -10,6 +10,9 @@
       "image": "localhost:5000/captcha",
       "network": "HOST",
       "parameters": [
+      ],
+      "portMappings": [
+        { "containerPort": 8081, "hostPort": 0, "servicePort": 9000, "protocol": "tcp" }
       ]
     }
   },

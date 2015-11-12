@@ -50,7 +50,7 @@ task docker(type: Exec) {
 
         CMD ["java", "-cp", "captcha-standalone.jar", "com.thoughtworks.captcha.CaptchaServer"]
     '''
-    commandLine 'docker', 'build', '-t', 'localhost:5000/captcha', '.'
+    commandLine 'docker', 'build', '-t', 'localhost:5000/captcha', '..'
 }
 
 task push(type: Exec) {
