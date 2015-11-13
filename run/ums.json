@@ -21,6 +21,7 @@
     ]
   },
   "env": {
+    "DEP_SERVICES": "[{\"name\":\"mysql\",\"type\":\"MYSQL\",\"uri\":\"jdbc:mysql://test.cjtn1i9foszd.us-west-2.rds.amazonaws.com:3306/ums_ultra?zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&characterEncoding=UTF-8&useLegacyDatetimeCode=false&serverTimezone=UTC&user=mysqlmysql&password=mysqlmysql\"}]"
   },
   "ports": [
     0
