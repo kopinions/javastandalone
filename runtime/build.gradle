@@ -1,0 +1,6 @@
+ext {
+    jaxrs = '2.0.1'
+}
+dependencies {
+    compile "org.glassfish.jersey.media:jersey-media-json-jackson:$jersey"
+}
