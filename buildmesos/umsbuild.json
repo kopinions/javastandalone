@@ -7,7 +7,7 @@
   "container": {
     "docker": {
       "type": "DOCKER",
-      "image": "folsomlabs/jenkins-dind-single",
+      "image": "registry.thoughtworks.com:5000/dind",
       "network": "HOST"
     },
     "volumes": [
@@ -19,7 +19,7 @@
     ]
   },
   "env": {
-    "JENKINS_COMMAND": "git clone https://github.com/sjkyspa/javastandalone.git && cd javastandalone  && ./gradlew standaloneJar && ./gradlew docker && ./gradlew push"
+    "BUILD": "git clone https://github.com/sjkyspa/javastandalone.git && cd javastandalone  && ./gradlew standaloneJar && ./gradlew docker && ./gradlew push"
   },
   "ports": [
     0
