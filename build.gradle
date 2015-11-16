@@ -1,6 +1,7 @@
 import org.gradle.api.credentials.AwsCredentials
 
 allprojects {
+    apply plugin: 'idea'
     group = 'com.thoughtworks.captcha'
     version = '1.0.0'
 }
