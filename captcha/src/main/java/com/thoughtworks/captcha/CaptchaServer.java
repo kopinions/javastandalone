@@ -1,6 +1,6 @@
 package com.thoughtworks.captcha;
 
-import com.thoughtworks.cloud.CloudEnvironment;
+import com.thoughtworks.captcha.util.CloudEnvironment;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.servlet.WebappContext;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;

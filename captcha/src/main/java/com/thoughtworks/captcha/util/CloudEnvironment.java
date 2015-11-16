@@ -1,4 +1,4 @@
-package com.thoughtworks.cloud;
+package com.thoughtworks.captcha.util;
 
 
 import com.fasterxml.jackson.core.type.TypeReference;
