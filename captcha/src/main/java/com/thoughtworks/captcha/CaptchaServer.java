@@ -1,5 +1,6 @@
 package com.thoughtworks.captcha;
 
+import com.thoughtworks.cloud.CloudEnvironment;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.servlet.WebappContext;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -18,7 +19,10 @@ public class CaptchaServer {
 
         servletRegistration.addMapping("/*");
 
-        HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create("http://0.0.0.0:8081"));
+        CloudEnvironment env = new CloudEnvironment();
+        String port = env.getValue("PORT");
+
+        HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create("http://0.0.0.0:" + port));
         context.deploy(server);
 
         server.start();

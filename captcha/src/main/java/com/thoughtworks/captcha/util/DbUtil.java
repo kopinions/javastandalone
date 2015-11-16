@@ -18,8 +18,7 @@ public class DbUtil {
             try {
                 CloudEnvironment env = new CloudEnvironment();
                 Map<String, Object> mysql = env.getServiceDataByName("mysql");
-                String uri = String.valueOf(mysql.get("uri"));
-                connection = DriverManager.getConnection(uri);
+                connection = DriverManager.getConnection(String.valueOf(mysql.get("uri")));
             } catch (SQLException e) {
                 e.printStackTrace();
             }
