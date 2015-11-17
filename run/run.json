@@ -1,5 +1,5 @@
 {
-  "id": "umsrun1",
+  "id": "run",
   "instances": 1,
   "cpus": 0.2,
   "mem": 300.0,
@@ -21,7 +21,7 @@
     ]
   },
   "env": {
-    "DEP_SERVICES": "[{\"name\":\"mysql\",\"type\":\"MYSQL\",\"uri\":\"jdbc:mysql://test.cjtn1i9foszd.us-west-2.rds.amazonaws.com:3306/ums_ultra?zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&characterEncoding=UTF-8&useLegacyDatetimeCode=false&serverTimezone=UTC&user=mysqlmysql&password=mysqlmysql\"}]"
+    "DEP_SERVICES": "[{\"credential\":{\"password\":\"password\",\"username\":\"root\"},\"port\":31001,\"ip\":\"192.168.50.4\",\"name\":\"mysql\",\"host\":\"mysql-26076-s0.servicedashboard.slave.mesos.\",\"uri\":\"jdbc:mysql://mysql-26076-s0.servicedashboard.slave.mesos.:31001/mysql?user=root&password=password\"}]"
   },
   "ports": [
     0
